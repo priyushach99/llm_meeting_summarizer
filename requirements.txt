@@ -1,0 +1,7 @@
+streamlit
+sentence-transformers
+openai-whisper
+faiss-cpu
+ollama
+numpy
+fpdf
