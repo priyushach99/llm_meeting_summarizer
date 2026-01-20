@@ -103,16 +103,15 @@ llm-meeting-summarizer/
 ├── requirements.txt
 ├── README.md
 └── .gitignore
-=======
+
 ---
-title: Llm Meeting Summarizer
-emoji: 🚀
-colorFrom: red
-colorTo: red
-sdk: docker
-app_port: 8501
-tags:
-- streamlit
+title: llm-meeting-summarizer
+emoji: 🧠
+colorFrom: blue
+colorTo: purple
+sdk: streamlit
+sdk_version: "1.32.0"
+python_version: "3.10"
+app_file: app.py
 pinned: false
-short_description: 'Built an end-to-end LLM-powered meeting intelligence system '
 ---
