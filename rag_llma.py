@@ -1,9 +1,12 @@
 from sentence_transformers import SentenceTransformer
 import faiss
-import ollama
 import numpy as np
+from groq import Groq
+import os
 
 embedder = SentenceTransformer("all-MiniLM-L6-v2")
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+
 documents = []
 index = None
 
@@ -53,8 +56,8 @@ If the answer IS explicitly in the context, reply exactly:
 YES
 """
 
-    guard = ollama.chat(
-        model="llama2",
+    guard = client.chat.completions.create(
+        model="llama3-8b-8192",
         messages=[{"role": "user", "content": guard_prompt}]
     )["message"]["content"].strip()
 
@@ -73,8 +76,8 @@ Question:
 {question}
 """
 
-    response = ollama.chat(
-        model="llama2",
+    response = client.chat.completions.create(
+        model="llama3-8b-8192",
         messages=[{"role": "user", "content": answer_prompt}]
     )
 

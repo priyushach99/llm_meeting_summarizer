@@ -1,7 +1,9 @@
 streamlit
+groq
 sentence-transformers
-openai-whisper
 faiss-cpu
-ollama
+whisper
+pydub
+reportlab
 numpy
 fpdf

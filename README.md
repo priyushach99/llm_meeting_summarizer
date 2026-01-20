@@ -1,14 +1,3 @@
----
-title: LLM Meeting Summarizer
-emoji: 🚀
-colorFrom: red
-colorTo: red
-sdk: streamlit
-sdk_version: "1.32.0"
-python_version: "3.10"
-app_file: app.py
-pinned: false
----
 
 # llm_meeting_summarizer
 Built an end-to-end LLM-powered meeting intelligence system using Whisper, LLaMA-2, FAISS, and Streamlit to transcribe audio, generate structured summaries, extract action items, and enable semantic Q&amp;A.

@@ -1,9 +1,11 @@
 #from openai import OpenAI
 #import os
-import ollama
+from groq import Groq
+import os
 from cache_utils import get_hash, load_cache, save_cache
 
 #client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 def summarize_meeting(transcript):
     cache = load_cache()
@@ -36,8 +38,8 @@ Transcript:
 {transcript}
 """
 
-    response = ollama.chat(
-        model="llama2",  # local LLaMA 2 model via Ollama
+    response = client.chat.completions.create(
+        model="llama3-8b-8192",
         messages=[{"role": "user", "content": prompt}],
         options={
             "temperature": 0.0,
