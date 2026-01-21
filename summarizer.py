@@ -53,7 +53,8 @@ Transcript:
             messages=[{"role": "user", "content": prompt}],
             temperature=0.0,
             top_p=0.8,
-            repeat_penalty=1.1
+            frequency_penalty=0.2,
+            presence_penalty=0.0
         )
 
         #summary = response["message"]["content"]
