@@ -17,14 +17,14 @@ def get_groq_client():
 def summarize_meeting(transcript):
     
     client = get_groq_client()   # <— FIXED: client created here
-    print("summarizer.py client created at import:", "client" in globals())
+    
     cache = load_cache()
     transcript_hash = get_hash(transcript)
 
     # Return cached results
-    #if transcript_hash in cache:
-    #    print(" Loaded summary from cache")
-    #    return cache[transcript_hash], True
+    if transcript_hash in cache:
+        print(" Loaded summary from cache")
+        return cache[transcript_hash], True
     prompt = f"""
 You are an AI meeting assistant.
 

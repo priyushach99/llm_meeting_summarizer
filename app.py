@@ -1,9 +1,4 @@
 import streamlit as st
-st.write("Secrets loaded:", "GROQ" in st.secrets)
-st.write("GROQ keys:", list(st.secrets.get("GROQ", {}).keys()))
-print("Loaded summarizer.py")
-print("Loaded transcriber.py")
-print("Loaded rag_llama.py")
 from transcriber import transcribe_audio
 from summarizer import summarize_meeting
 #from rag_utils import chunk_text, embed_chunks, build_faiss_index, query_rag

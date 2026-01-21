@@ -10,7 +10,6 @@ def get_groq_client():
 
 def transcribe_audio(audio_path):
     client = get_groq_client()   # <-- FIX: create client inside function
-    print("transcriber.py client created at import:", "client" in globals())
 
     with open(audio_path, "rb") as audio_file:
         transcription = client.audio.transcriptions.create(

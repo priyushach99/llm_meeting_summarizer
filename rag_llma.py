@@ -29,8 +29,6 @@ def query_rag(question, top_k=5, threshold=0.40):
     global index, documents
     
     client = get_groq_client()   # <— FIX: create client inside function
-    
-    print("rag_llama.py client created at import:", "client" in globals())
 
     # Step 1: Embed question
     q_emb = embedder.encode([question]).astype("float32")
