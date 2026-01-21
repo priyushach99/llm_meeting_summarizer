@@ -7,10 +7,12 @@ import os
 
 embedder = SentenceTransformer("all-MiniLM-L6-v2")
 
-try:
-    client = Groq(api_key=st.secrets["GROQ"]["API_KEY"]) # Streamlit Cloud
-except Exception:
-    client = Groq(api_key=os.getenv("GROQ_API_KEY")) # Local .env
+def get_groq_client():
+    try:
+        return Groq(api_key=st.secrets["GROQ"]["API_KEY"])   # Streamlit Cloud
+    except Exception:
+        return Groq(api_key=os.getenv("GROQ_API_KEY"))       # Local dev
+
 
 documents = []
 index = None
@@ -25,6 +27,8 @@ def build_vector_db(chunks):
 
 def query_rag(question, top_k=5, threshold=0.40):
     global index, documents
+    
+    client = get_groq_client()   # <— FIX: create client inside function
 
     # Step 1: Embed question
     q_emb = embedder.encode([question]).astype("float32")

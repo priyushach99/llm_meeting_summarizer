@@ -2,12 +2,15 @@ import streamlit as st
 from groq import Groq
 import os
 
-try:
-    client = Groq(api_key=st.secrets["GROQ"]["API_KEY"]) # Streamlit Cloud
-except Exception:
-    client = Groq(api_key=os.getenv("GROQ_API_KEY")) # Local .env
+def get_groq_client():
+    try:
+        return Groq(api_key=st.secrets["GROQ"]["API_KEY"])   # Streamlit Cloud
+    except Exception:
+        return Groq(api_key=os.getenv("GROQ_API_KEY"))       # Local dev
 
 def transcribe_audio(audio_path):
+    client = get_groq_client()   # <-- FIX: create client inside function
+
     with open(audio_path, "rb") as audio_file:
         transcription = client.audio.transcriptions.create(
             file=audio_file,
