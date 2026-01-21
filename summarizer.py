@@ -22,9 +22,9 @@ def summarize_meeting(transcript):
     transcript_hash = get_hash(transcript)
 
     # Return cached results
-    if transcript_hash in cache:
-        print(" Loaded summary from cache")
-        return cache[transcript_hash], True
+    #if transcript_hash in cache:
+    #    print(" Loaded summary from cache")
+    #    return cache[transcript_hash], True
     prompt = f"""
 You are an AI meeting assistant.
 
@@ -58,16 +58,17 @@ Transcript:
 
         #summary = response["message"]["content"]
         summary = response.choices[0].message.content
+        
+        # Save to cache
+        cache[transcript_hash] = summary
+        save_cache(cache)
+        
+        return summary, False
     
     except Exception as e:
         print(f"Error calling Groq API: {e}")
-        summary = "Summary could not be generated due to API error."
-    
-    # Save to cache
-    cache[transcript_hash] = summary
-    save_cache(cache)
-
-    return summary, False 
+        return "Summary could not be generated due to API error.", False
+     
 
     #response = client.chat.completions.create(
     #    model="gpt-4o-mini",
