@@ -49,7 +49,7 @@ Transcript:
 """
     try: 
         response = client.chat.completions.create(
-            model="llama3-8b-8192",
+            model="llama3-8b-instant",
             messages=[{"role": "user", "content": prompt}],
             temperature=0.0,
             top_p=0.8,
