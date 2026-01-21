@@ -59,7 +59,8 @@ YES
     guard = client.chat.completions.create(
         model="llama3-8b-8192",
         messages=[{"role": "user", "content": guard_prompt}]
-    )["message"]["content"].strip()
+    ).choices[0].message.content.strip()
+    #)["message"]["content"].strip()
 
     if guard == "NO":
         return "This was not discussed in the meeting."
@@ -81,4 +82,4 @@ Question:
         messages=[{"role": "user", "content": answer_prompt}]
     )
 
-    return response["message"]["content"]
+    return response.choices[0].message.content

@@ -37,18 +37,22 @@ Requirements:
 Transcript:
 {transcript}
 """
+    try: 
+        response = client.chat.completions.create(
+            model="llama3-8b-8192",
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.0,
+            top_p=0.8,
+            repeat_penalty=1.1
+        )
 
-    response = client.chat.completions.create(
-        model="llama3-8b-8192",
-        messages=[{"role": "user", "content": prompt}],
-        options={
-            "temperature": 0.0,
-            "top_p": 0.8,
-            "repeat_penalty": 1.1
-        }
-    )
-
-    summary = response["message"]["content"]
+        #summary = response["message"]["content"]
+        summary = response.choices[0].message.content
+    
+    except Exception as e:
+        print(f"Error calling Groq API: {e}")
+        summary = "Summary could not be generated due to API error."
+    
     # Save to cache
     cache[transcript_hash] = summary
     save_cache(cache)
