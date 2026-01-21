@@ -68,7 +68,7 @@ YES
 """
 
     guard = client.chat.completions.create(
-        model="llama3-8b-instant",
+        model="llama-3.1-8b-instant",
         messages=[{"role": "user", "content": guard_prompt}]
     ).choices[0].message.content.strip()
     #)["message"]["content"].strip()
@@ -89,7 +89,7 @@ Question:
 """
 
     response = client.chat.completions.create(
-        model="llama3-8b-instant",
+        model="llama-3.1-8b-instant",
         messages=[{"role": "user", "content": answer_prompt}]
     )
 
