@@ -34,6 +34,7 @@ STRICT RULES:
 - Do NOT add assumptions or missing details.
 - If something is unclear or missing, write "Not specified".
 - Follow the output format exactly.
+- Each field must be on its own line.
 
 FORMAT:
 
