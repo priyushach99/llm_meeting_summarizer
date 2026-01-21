@@ -50,10 +50,10 @@ Transcript:
     try: 
         response = client.chat.completions.create(
             model="llama-3.1-8b-instant",
-            messages=[{"role": "user", "content": prompt}],
-            temperature=0.0,
-            top_p=0.8,
-            repeat_penalty=1.1
+            messages=[{"role": "user", "content": prompt}]#,
+            #temperature=0.0,
+            #top_p=0.8,
+            #repeat_penalty=1.1
         )
 
         #summary = response["message"]["content"]
@@ -66,7 +66,10 @@ Transcript:
         return summary, False
     
     except Exception as e:
-        print(f"Error calling Groq API: {e}")
+        import traceback
+        st.error("Groq API Error:")
+        st.error(str(e))
+        st.code(traceback.format_exc())
         return "Summary could not be generated due to API error.", False
      
 
