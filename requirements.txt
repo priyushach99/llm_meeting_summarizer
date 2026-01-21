@@ -2,7 +2,7 @@ streamlit
 groq
 sentence-transformers
 faiss-cpu
-whisper
+openai-whisper
 pydub
 reportlab
 numpy
