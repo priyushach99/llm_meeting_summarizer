@@ -50,7 +50,7 @@ Transcript:
     try: 
         response = client.chat.completions.create(
             model="llama-3.1-8b-instant",
-            messages=[{"role": "user", "content": prompt}]#,
+            messages=[{"role": "user", "content": prompt}],
             temperature=0.0,
             top_p=0.8,
             repeat_penalty=1.1
