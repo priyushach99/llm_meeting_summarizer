@@ -47,9 +47,9 @@ Decisions Made:
 - <bullet points>
 
 Action Items:
-- Owner: <name or Not specified>
-  Task: <task or Not specified>
-  Deadline: <date or Not specified>
+- Owner: <name or Not specified><bullet points>
+- Task: <task or Not specified><bullet points>
+- Deadline: <date or Not specified><bullet points>
 
 Transcript:
 {transcript}
