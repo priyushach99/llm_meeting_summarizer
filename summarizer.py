@@ -7,7 +7,7 @@ from cache_utils import get_hash, load_cache, save_cache
 #client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 try:
-    client = Groq(api_key=st.secrets["GROQ_API_KEY"]) # Streamlit Cloud
+    client = Groq(api_key=st.secrets["GROQ"]["API_KEY"]) # Streamlit Cloud
 except Exception:
     client = Groq(api_key=os.getenv("GROQ_API_KEY")) # Local .env
 

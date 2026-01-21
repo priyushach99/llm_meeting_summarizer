@@ -7,7 +7,7 @@ import os
 embedder = SentenceTransformer("all-MiniLM-L6-v2")
 
 try:
-    client = Groq(api_key=st.secrets["GROQ_API_KEY"]) # Streamlit Cloud
+    client = Groq(api_key=st.secrets["GROQ"]["API_KEY"]) # Streamlit Cloud
 except Exception:
     client = Groq(api_key=os.getenv("GROQ_API_KEY")) # Local .env
 
