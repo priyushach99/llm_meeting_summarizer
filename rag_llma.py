@@ -1,4 +1,5 @@
 from sentence_transformers import SentenceTransformer
+import streamlit as st
 import faiss
 import numpy as np
 from groq import Groq
