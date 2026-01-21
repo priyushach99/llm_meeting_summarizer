@@ -26,23 +26,29 @@ def summarize_meeting(transcript):
         print(" Loaded summary from cache")
         return cache[transcript_hash], True
     prompt = f"""
-You are an AI meeting assistant.
+You are an AI assistant summarizing a meeting transcript.
 
-Rules:
-1. Only include information present in the transcript.
-2. Do NOT assume, infer, or add anything that is not explicitly stated.
-3. Do NOT invent names, or deadlines.
-4. If something is missing, write "Not specified".
-5. Use the exact format below:
+STRICT RULES:
+- Use ONLY information explicitly stated in the transcript.
+- Do NOT infer intent, meaning, or next steps.
+- Do NOT add assumptions or missing details.
+- If something is unclear or missing, write "Not specified".
+- Follow the output format exactly.
 
-Summarize the meeting clearly and extract action items.
-Requirements:
-- Key discussion points
-- Decisions made
-- Action items in bullet format like:
-    - Owner: Name
-    - Task: What needs to be done
-    - Deadline: When it is due (if mentioned)
+FORMAT:
+
+Meeting Summary
+
+Key Discussion Points:
+- <bullet points>
+
+Decisions Made:
+- <bullet points>
+
+Action Items:
+- Owner: <name or Not specified>
+  Task: <task or Not specified>
+  Deadline: <date or Not specified>
 
 Transcript:
 {transcript}
