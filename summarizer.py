@@ -51,9 +51,9 @@ Transcript:
         response = client.chat.completions.create(
             model="llama-3.1-8b-instant",
             messages=[{"role": "user", "content": prompt}]#,
-            #temperature=0.0,
-            #top_p=0.8,
-            #repeat_penalty=1.1
+            temperature=0.0,
+            top_p=0.8,
+            repeat_penalty=1.1
         )
 
         #summary = response["message"]["content"]
