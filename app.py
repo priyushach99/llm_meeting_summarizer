@@ -44,8 +44,10 @@ if uploaded_file:
         #index = build_faiss_index(embeddings)
         
         # After transcription
-        chunks = transcript.split("\n")
-        build_vector_db(chunks)
+        build_vector_db(transcript)
+
+        #chunks = transcript.split("\n")
+        #build_vector_db(chunks)
 
         # --- Summary ---
         info_col, button_col = st.columns([8, 2])
@@ -62,7 +64,7 @@ if uploaded_file:
         summary, used_cache = summarize_meeting(transcript)
         st.info("Summary loaded from cache" if used_cache else "Generated new summary")
 
-        st.subheader(" Meeting Summary")
+        st.subheader("Meeting Summary")
         st.write(summary)
     
     with right_col:
