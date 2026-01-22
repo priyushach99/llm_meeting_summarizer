@@ -19,7 +19,7 @@ A full-stack AI-powered meeting intelligence system that transcribes meetings, s
 
 - Semantic search using FAISS
 
-- LLaMA 2 inference via Ollama (no OpenAI cost)
+- LLaMA 3 (no OpenAI cost)
 
 - PDF report generation
 
@@ -50,7 +50,7 @@ FAISS Vector Store
 
 ↓
 
-LLaMA 2 (Ollama)
+LLaMA 3
 
 ↓
 
@@ -62,7 +62,7 @@ Summary + Action Items + Q&A
 
 Python
 
-LLaMA 2 (via Ollama)
+LLaMA 3
 
 Sentence Transformers
 
