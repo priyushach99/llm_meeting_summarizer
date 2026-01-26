@@ -105,5 +105,7 @@ llm-meeting-summarizer/
 ```
 
 ## Demo
-![Screenshot](<img width="1877" height="978" alt="LLM_1" src="https://github.com/user-attachments/assets/8f49a9e5-c0f5-4a95-9c99-b16f076f2063" />)
-![Screenshot](<img width="1857" height="932" alt="LLM_2" src="https://github.com/user-attachments/assets/aa8e31cf-f599-4f21-ad23-932a92f462f7" />)
+<p>
+<img width="1877" height="978" alt="LLM_1" src="https://github.com/user-attachments/assets/8f49a9e5-c0f5-4a95-9c99-b16f076f2063" />
+<img width="1857" height="932" alt="LLM_2" src="https://github.com/user-attachments/assets/aa8e31cf-f599-4f21-ad23-932a92f462f7" />
+</p>
