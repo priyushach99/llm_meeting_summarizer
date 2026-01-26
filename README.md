@@ -15,30 +15,19 @@ A full-stack AI-powered meeting intelligence system that transcribes meetings, s
 - PDF report generation
 - Streamlit interactive UI
 
-### 🏗️ Architecture
-
-```mermaid
-flowchart TD
-    A[🎵 Audio File] --> B[📝 Whisper Transcription]
-    B --> C[✂️ Text Chunking]
-    C --> D[🧠 Embeddings (SentenceTransformers)]
-    D --> E[📚 FAISS Vector Store]
-    E --> F[🤖 LLaMA 3]
-    F --> G[📝 Summary + Action Items + Q&A]
-
 ### Architecture
 Audio File
-↓
+→
 Whisper Transcription
-↓
+→
 Text Chunking
-↓
+→
 Embeddings (SentenceTransformers)
-↓
+→
 FAISS Vector Store
-↓
+→
 LLaMA 3
-↓
+→
 Summary + Action Items + Q&A
 
 ### 🔹 Programming Language
