@@ -1,7 +1,7 @@
-Built an end-to-end LLM-powered meeting intelligence system using Whisper, LLaMA-2, FAISS, and Streamlit to transcribe audio, generate structured summaries, extract action items, and enable semantic Q&amp;A.
+Built an end-to-end LLM-powered meeting intelligence system using Whisper, LLaMA-3, FAISS, and Streamlit to transcribe audio, generate structured summaries, extract action items, and enable semantic Q&amp;A.
 
 # LLM-Powered Meeting Summarizer 
-A full-stack AI-powered meeting intelligence system that transcribes meetings, summarizes discussions, extracts action items, and enables intelligent Q&A using RAG (Retrieval-Augmented Generation) — all running locally and free using LLaMA 2 + FAISS.
+A full-stack AI-powered meeting intelligence system that transcribes meetings, summarizes discussions, extracts action items, and enables intelligent Q&A using RAG (Retrieval-Augmented Generation) — all running locally and free using LLaMA 3 + FAISS.
 
 ✨ Features
 
@@ -36,7 +36,7 @@ Summary + Action Items + Q&A
 ![LLaMa3](https://img.shields.io/badge/LLaMa3-FF6F61?style=for-the-badge)
 ![Groq](https://img.shields.io/badge/Groq-0F52BA?style=for-the-badge)
 ![OpenAI Whisper (Speech-to-Text)](https://img.shields.io/badge/Whisper-8A2BE2?style=for-the-badge)
-![Sentence Transformers](https://img.shields.io/badge/Sentence-Transformers-FF4500?style=for-the-badge)
+![Sentence-Transformers](https://img.shields.io/badge/Sentence-Transformers-FF4500?style=for-the-badge)
 ![FAISS](https://img.shields.io/badge/FAISS-0078D7?style=for-the-badge)
 ### 🛠️ Libraries & Utilities
 ![PyDub](https://img.shields.io/badge/PyDub-FF6347?style=for-the-badge)
