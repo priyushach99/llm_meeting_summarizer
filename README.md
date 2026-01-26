@@ -15,6 +15,17 @@ A full-stack AI-powered meeting intelligence system that transcribes meetings, s
 - PDF report generation
 - Streamlit interactive UI
 
+### 🏗️ Architecture
+
+```mermaid
+flowchart TD
+    A[🎵 Audio File] --> B[📝 Whisper Transcription]
+    B --> C[✂️ Text Chunking]
+    C --> D[🧠 Embeddings (SentenceTransformers)]
+    D --> E[📚 FAISS Vector Store]
+    E --> F[🤖 LLaMA 3]
+    F --> G[📝 Summary + Action Items + Q&A]
+
 ### Architecture
 Audio File
 ↓
@@ -64,7 +75,7 @@ llm-meeting-summarizer/
 └── .gitignore
 ```
 
-## Demo
+## Screenshots
 <p>
 <img width="1877" height="978" alt="LLM_1" src="https://github.com/user-attachments/assets/8f49a9e5-c0f5-4a95-9c99-b16f076f2063" />
 <img width="1857" height="932" alt="LLM_2" src="https://github.com/user-attachments/assets/aa8e31cf-f599-4f21-ad23-932a92f462f7" />
