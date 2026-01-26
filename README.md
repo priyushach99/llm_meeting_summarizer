@@ -1,5 +1,3 @@
-
-# llm_meeting_summarizer
 Built an end-to-end LLM-powered meeting intelligence system using Whisper, LLaMA-2, FAISS, and Streamlit to transcribe audio, generate structured summaries, extract action items, and enable semantic Q&amp;A.
 
 # LLM-Powered Meeting Summarizer 
@@ -17,9 +15,7 @@ A full-stack AI-powered meeting intelligence system that transcribes meetings, s
 - PDF report generation
 - Streamlit interactive UI
 
-## 📍 Local Deployment
-
-### 🧠 Architecture
+### Architecture
 Audio File
 ↓
 Whisper Transcription
@@ -34,7 +30,7 @@ LLaMA 3
 ↓
 Summary + Action Items + Q&A
 
-🔹 Tech Stack
+### 🔹 Programming Language
 ![Python](https://img.shields.io/badge/Python-FF6F61?style=for-the-badge)
 ### 🔹 Models & Libraries
 ![LLaMa3](https://img.shields.io/badge/LLaMa3-FF6F61?style=for-the-badge)
@@ -42,7 +38,6 @@ Summary + Action Items + Q&A
 ![OpenAI Whisper (Speech-to-Text)](https://img.shields.io/badge/Whisper-8A2BE2?style=for-the-badge)
 ![Sentence Transformers](https://img.shields.io/badge/Sentence-Transformers-FF4500?style=for-the-badge)
 ![FAISS](https://img.shields.io/badge/FAISS-0078D7?style=for-the-badge)
-
 ### 🛠️ Libraries & Utilities
 ![PyDub](https://img.shields.io/badge/PyDub-FF6347?style=for-the-badge)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge)
