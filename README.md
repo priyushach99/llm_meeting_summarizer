@@ -8,85 +8,50 @@ A full-stack AI-powered meeting intelligence system that transcribes meetings, s
 ✨ Features
 
 - Upload meeting audio (MP3 / WAV / M4A)
-
 - Automatic transcription using Whisper
-
 - Structured meeting summary
-
 - Action item extraction (Owner, Task, Deadline)
-
 - Ask questions using RAG
-
 - Semantic search using FAISS
-
 - LLaMA 3 (no OpenAI cost)
-
 - PDF report generation
-
 - Streamlit interactive UI
-
-- Works completely offline
 
 ## 📍 Local Deployment
 
 ### 🧠 Architecture
 Audio File
-
 ↓
-
 Whisper Transcription
-
 ↓
-
 Text Chunking
-
 ↓
-
 Embeddings (SentenceTransformers)
-
 ↓
-
 FAISS Vector Store
-
 ↓
-
 LLaMA 3
-
 ↓
-
 Summary + Action Items + Q&A
 
-🧠 Tech Stack
+🔹 Tech Stack
+![Python](https://img.shields.io/badge/Python-FF6F61?style=for-the-badge)
+### 🔹 Models & Libraries
+![LLaMa3](https://img.shields.io/badge/LLaMa3-FF6F61?style=for-the-badge)
+![Groq](https://img.shields.io/badge/Groq-0F52BA?style=for-the-badge)
+![OpenAI Whisper (Speech-to-Text)](https://img.shields.io/badge/Whisper-8A2BE2?style=for-the-badge)
+![Sentence Transformers](https://img.shields.io/badge/Sentence-Transformers-FF4500?style=for-the-badge)
+![FAISS](https://img.shields.io/badge/FAISS-0078D7?style=for-the-badge)
 
-🔹 Core Technologies
+### 🛠️ Libraries & Utilities
+![PyDub](https://img.shields.io/badge/PyDub-FF6347?style=for-the-badge)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge)
+![ReportLab](https://img.shields.io/badge/ReportLab-2E8B57?style=for-the-badge)
+![FPDF](https://img.shields.io/badge/FPDF-4682B4?style=for-the-badge)
 
-Python
+🔹 AI / ML : Retrieval-Augmented Generation (RAG), Semantic search, Embeddings-based similarity search, Prompt engineering
 
-LLaMA 3
-
-Sentence Transformers
-
-FAISS (Vector Database)
-
-OpenAI Whisper (Speech-to-Text)
-
-Streamlit
-
-🔹 AI / ML
-
-Retrieval-Augmented Generation (RAG)
-
-Semantic search
-
-Embeddings-based similarity search
-
-Prompt engineering
-
-🔹 Others
-
-PDF generation (ReportLab)
-
-Caching for deterministic outputs
+🔹 Others : PDF generation (ReportLab), Caching for deterministic outputs
 
 ## 📂 Project Structure
 
